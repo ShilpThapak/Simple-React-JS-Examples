@@ -1,1 +1,1 @@
-# Simple-React-JS-Examples
+# Simple React examples to understand React.js
