@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <div id="app"></div>
+    </body>
+
+    <script type="text/babel">
+
+        function Lake(){
+            return (
+                <div>
+                    <h1>Lake</h1>
+                </div>
+            )
+
+        }
+
+        function SkiResort(){
+            return (
+                <div>
+                    <h1>SkiResort</h1>
+                </div>
+            )
+        }
+
+        function App(props){
+            
+            if (props.season == "summer"){
+                return <SkiResort />
+            }
+            else {
+                return <Lake />
+            }
+            
+        }
+
+        ReactDOM.render(<App season="summer"/>, document.querySelector('#app'));
+    </script>
+</html>

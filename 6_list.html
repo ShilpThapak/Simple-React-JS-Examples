@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>List</title>
+    </head>
+
+    <body>
+        <div id="app"></div>
+    </body>
+
+    <script type="text/babel">
+        var contries = ["USA", "India", "China", "Japan"]
+
+        function List(contries){
+            return (
+                <div>
+                    <ul>
+                        <li>{contries.contries[0]}</li>
+                        <li>{contries.contries[1]}</li>
+                        <li>{contries.contries[2]}</li>
+                    </ul>
+
+                    <ul>
+                        {
+                            contries.contries.map(country => (
+                                <li>{country}</li>
+                            ))
+                        }
+                    </ul>
+
+                </div>
+            )
+        }
+
+        ReactDOM.render(<List contries={contries} />, document.querySelector('#app'));
+    </script>
+</html>
